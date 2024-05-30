@@ -52,7 +52,6 @@ input_features = [
 ]
 
 # PROCESSAMENTO DE NOVAS INFROMAÇÕES
-
 if st.button('Processar'):
     # CRIANDO DATAFRAME PARA PROCESSAMENTO DO MODELO
     input_df = pd.DataFrame([input_features], columns=base.columns.drop('Categoria'))
@@ -70,7 +69,6 @@ st.title('Base de Cliente Classificados')
 st.dataframe(base, use_container_width=True)
 
 col1, col2 = st.columns(2)
-
 with col1:
     fig, ax = plt.subplots()
     ax.bar(base['Categoria'], base['Renda Anual (R$)'])
